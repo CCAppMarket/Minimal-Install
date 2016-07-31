@@ -1,0 +1,3 @@
+[submodule ".ccam/app/ccam"]
+	path = .ccam/app/ccam
+	url = https://github.com/CCAppMarket/AppRepository/
