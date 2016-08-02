@@ -1,0 +1,1 @@
+shell.run('/.ccam/app/ccam/main.lua', ...)
