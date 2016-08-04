@@ -17,6 +17,9 @@ for _, v in pairs(libraries) do
 	lib()
 end
 
+if CCAM_CONF.CHECK_UPDATES_STARTUP then
+	ccam.updateall(true)
+end
 
 --[[ Add bin directory to shell path ]]--
 shell.setPath(shell.path() .. ":" .. CCAM_CONF.BIN_DIR)
