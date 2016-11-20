@@ -21,5 +21,10 @@ if CCAM_CONF.CHECK_UPDATES_STARTUP then
 	ccam.updateall(true)
 end
 
+--[[ Load repository table ]]--
+local repo_file = fs.open(CCAM_CONF.LIB_DIR .. "ccam/repos.json", "r")
+CCAM_CONF.REPOS = json.decode(repo_file.readAll())
+repo_file.close()
+
 --[[ Add bin directory to shell path ]]--
 shell.setPath(shell.path() .. ":" .. CCAM_CONF.BIN_DIR)
