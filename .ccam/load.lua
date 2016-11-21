@@ -18,11 +18,11 @@ for _, v in pairs(libraries) do
 end
 
 if CCAM_CONF.CHECK_UPDATES_STARTUP then
-	ccam.updateall(true)
+	libccam.updateall(true)
 end
 
 --[[ Load repository table ]]--
-local repo_file = fs.open(CCAM_CONF.LIB_DIR .. "ccam/repos.json", "r")
+local repo_file = fs.open(CCAM_CONF.LIB_DIR .. "libccam/repos.json", "r")
 CCAM_CONF.REPOS = json.decode(repo_file.readAll())
 repo_file.close()
 
