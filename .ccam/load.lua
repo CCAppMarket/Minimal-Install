@@ -12,7 +12,7 @@ local libraries = fs.list(CCAM_CONF.LIB_DIR)
 -- Load libraries into table
 for _, v in pairs(libraries) do
 	_G[v] = {}
-	local lib = loadfile(CCAM_CONF.LIB_DIR .. v .. CCAM_CONF.LIB_MAIN)
+	local lib = loadfile(CCAM_CONF.LIB_DIR .. v .. CCAM_CONF.MAIN)
 	setfenv(lib, setmetatable( _G[v], { __index = _G } ))
 	lib()
 end
